@@ -167,7 +167,7 @@ class SmtpService extends NotificationService {
           attachmentGenerator
         )
       default:
-        return {}
+        return eventData;
     }
   }
 
@@ -319,7 +319,7 @@ class SmtpService extends NotificationService {
       })
       const status = await email
         .send({
-          template: templateName,
+          template: options.templateName,
           message: {
             to: options.to,
           },
