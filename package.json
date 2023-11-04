@@ -1,13 +1,13 @@
 {
-  "name": "medusa-plugin-smtp",
-  "version": "1.2.0",
+  "name": "nc-medusa-plugin-smtp",
+  "version": "1.2.2",
   "description": "SMTP transactional emails",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/minpham-com/medusa-plugin-smtp"
   },
-  "author": "Min",
+  "author": "Noel",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "latest",
