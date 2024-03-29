@@ -4,9 +4,9 @@ class UserSubscriber {
 
     this.eventBus_ = eventBusService
 
-    this.eventBus_.subscribe("user.password_reset", async (data) => {
+    this.eventBus_.subscribe("customer.password_reset", async (data) => {
       await this.smtpService_.sendNotification(
-        "user.password_reset",
+        "customer.password_reset",
         data,
         null
       )
