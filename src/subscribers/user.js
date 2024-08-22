@@ -10,7 +10,7 @@ class UserSubscriber {
         "customer.password_reset",
         {
           ...data, payload:
-            Buffer.from(JSON.stringify({ email: payload.email, token: payload.token })).toString('base64')
+            Buffer.from(JSON.stringify({ email: data.email, token: data.token })).toString('base64')
         },
         null
       )

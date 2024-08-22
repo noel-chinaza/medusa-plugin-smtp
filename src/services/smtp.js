@@ -223,6 +223,9 @@ class SmtpService extends NotificationService {
       transport: this.transporter,
       views: {
         root: this.options_.emailTemplatePath,
+        options: {
+          extension: 'njk'
+        }
       },
       send: true,
     })
@@ -282,6 +285,9 @@ class SmtpService extends NotificationService {
       transport: this.transporter,
       views: {
         root: this.options_.emailTemplatePath,
+        options: {
+          extension: 'njk'
+        }
       },
       send: true,
     })
@@ -314,6 +320,9 @@ class SmtpService extends NotificationService {
         transport: this.transporter,
         views: {
           root: this.options_.emailTemplatePath,
+          options: {
+            extension: 'njk'
+          }
         },
         send: true,
       })
@@ -433,9 +442,8 @@ class SmtpService extends NotificationService {
         return {
           is_giftcard: false,
           code: discount.code,
-          descriptor: `${discount.rule.value}${
-            discount.rule.type === 'percentage' ? '%' : ` ${currencyCode}`
-          }`,
+          descriptor: `${discount.rule.value}${discount.rule.type === 'percentage' ? '%' : ` ${currencyCode}`
+            }`,
         }
       })
     }
@@ -540,9 +548,8 @@ class SmtpService extends NotificationService {
         return {
           is_giftcard: false,
           code: discount.code,
-          descriptor: `${discount.rule.value}${
-            discount.rule.type === 'percentage' ? '%' : ` ${currencyCode}`
-          }`,
+          descriptor: `${discount.rule.value}${discount.rule.type === 'percentage' ? '%' : ` ${currencyCode}`
+            }`,
         }
       })
     }
